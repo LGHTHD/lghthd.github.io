@@ -5,10 +5,11 @@ $color-tan: #FFF8E6
 $color-gray: #333333
 $color-orange: #FDA852
 
-%horizontal-position-right
+%horizontal-position
   grid-column: 1/6
   display: flex
   justify-content: center
+
 
 %skills-paragraph-styles
     font-size: 15px
@@ -25,6 +26,12 @@ $color-orange: #FDA852
         -ms-animation: fadein $time /* Internet Explorer */
          -o-animation: fadein $time /* Opera < 12.1 */
             animation: fadein $time
+
+@mixin fadein ( $time: 1s )
+  transition: all $time ease-out
+  opacity: 0
+
+
 
 
 //Styles
@@ -56,11 +63,9 @@ $color-orange: #FDA852
   h2
    font-family: 'Montserrat', sans-serif
    font-size: 30px
-   color: $color-red
-
-   display: flex
    align-items: center
-   justify-content: center
+   color: $color-red
+   @extend %horizontal-position
 
   .p2
     line-height: 50px
@@ -71,17 +76,14 @@ $color-orange: #FDA852
 
 
 .title-1
-  @extend %horizontal-position-right
   grid-row: 2/3
   margin-left: 30px
-  display: flex
   align-items: flex-end
   font-size: 50px
   font-family: 'Alfa Slab One', cursive
   opacity: 1
   @include web-animation(2.5s)
-
-
+  @extend %horizontal-position
 
 @keyframes fadein
     from { opacity: 0; }
@@ -91,23 +93,20 @@ $color-orange: #FDA852
 .title-2
   grid-column: 2/5
   grid-row: 3/4
-
-  display: flex
-  justify-content: flex-start
-
-  margin-left: 70px
+  margin-left: 65px
   color: #545454
   font-family: 'Montserrat', sans-serif
   opacity: 1
   @include web-animation(2.5s)
+  @extend %horizontal-position
 
 
 .boi
   grid-column: 2/5
   grid-row: 5/10
-  opacity: 0
-  transition: all 2s ease-out
   margin-top: 141px
+  @include fadein(2s)
+  @extend %horizontal-position
 
 
 .boi.fade-in
@@ -117,11 +116,10 @@ $color-orange: #FDA852
 .outline
   grid-column: 2/5
   grid-row: 5/10
-  justify-content: center
   margin-top: 122px
   margin-left: 21px
-  opacity: 0
-  transition: all 1s ease-out
+  @include fadein(1s)
+  @extend %horizontal-position
 
 
 .outline.fade-in
@@ -129,15 +127,14 @@ $color-orange: #FDA852
 
 
 .manman
+  @extend %horizontal-position
   grid-column: 2/5
   grid-row: 10/14
-  justify-content: center
   width: 330px
   margin-top: 25px
   margin-left: 17px
   z-index: 3
-  opacity: 0
-  transition: all 1.4s ease-out
+  @include fadein(1.4s)
 
 
 .manman.fade-in
@@ -150,23 +147,16 @@ $color-orange: #FDA852
 
 
 .p2
-  grid-column: 1/6
   grid-row: 7/9
   font-family: 'Montserrat', sans-serif
   font-size: 18px
-
-  color: #FFF8E6
+  color: $color-tan
   margin-top: 25px
   margin-left: 15px
-
-  display: flex
-  justify-content: center
-
   position: relative
   z-index: 2
-
-  opacity: 0
-  transition: all 1s ease-out
+  @include fadein(1s)
+  @extend %horizontal-position
 
 
 .p2.fade-in
@@ -174,8 +164,8 @@ $color-orange: #FDA852
 
 
 .skills
-  opacity: 0
-  transition: all 2s ease-out
+  @extend %horizontal-position
+  @include fadein(2s)
 
 
 .skills.fade-in
@@ -184,13 +174,11 @@ $color-orange: #FDA852
 
 
 #html
-  @extend %horizontal-position-right
   grid-row: 9/10
   color: $color-tan
 
 
 #htmlp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 10/11
   align-items: baseline
@@ -198,7 +186,6 @@ $color-orange: #FDA852
 
 
 #javascript
-  @extend %horizontal-position-right
   grid-row: 10/11
   align-items: flex-end
   color: $color-tan
@@ -206,7 +193,6 @@ $color-orange: #FDA852
 
 
 #javascriptp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 11/12
   align-items: center
@@ -214,13 +200,11 @@ $color-orange: #FDA852
 
 
 #ruby
-  @extend %horizontal-position-right
   grid-row: 13/14
   color: $color-tan
 
 
 #rubyp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 14/15
   align-items: start
@@ -228,90 +212,79 @@ $color-orange: #FDA852
 
 
 #svg
-  @extend %horizontal-position-right
   grid-row: 12/13
   color: $color-tan
   align-items: flex-start
-  justify-content: center
 
 
 #svgp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 12/13
   align-items: flex-end
 
 
 #sql
-  @extend %horizontal-position-right
   grid-row: 17/18
   text-decoration: underline
 
 
 #git
-  @extend %horizontal-position-right
   grid-row: 14/15
   align-items: flex-end
   color: $color-tan
 
 
 #gitp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 15/16
   align-items: center
 
 
 #illustrator
-  @extend %horizontal-position-right
   grid-row: 16/17
   align-items: center
   color: $color-tan
 
 
 #illustratorp
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 17/18
   align-items: flex-start
 
 #audio
-  @extend %horizontal-position-right
   grid-row: 18/19
   align-items: flex-start
   color: $color-tan
 
 #audiop
-  @extend %horizontal-position-right
   @extend  %skills-paragraph-styles
   grid-row: 19/20
   align-items: flex-start
 
-.boujee
-  @extend %horizontal-position-right
+//Audio
+.music
+  z-index: 2
+  @extend %horizontal-position
+
+#boujee
   grid-row: 19/25
-  z-index: 2
 
-
-.patient
-  @extend %horizontal-position-right
+#patient
   grid-row: 22/25
-  z-index: 2
 
-.odali
-  @extend %horizontal-position-right
+#odali
   grid-row: 25/28
-  z-index: 2
 
+//Animations
 .squiggle1
-  @extend %horizontal-position-right
+  @extend %horizontal-position
   grid-row: 5/8
   align-items: center
   margin-top: 10px
 
 
 .squiggle-2
-  @extend %horizontal-position-right
+  @extend %horizontal-position
   grid-row: 13/18
   margin-top: 80px
   z-index: 2
