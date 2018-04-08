@@ -381,7 +381,16 @@
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
 }
+
 button {
+  grid-column: 3/4;
+  grid-row: 20/21;
+  align-items: center;
+  height: 60px;
+
+}
+
+.mail {
   grid-column: 3/4;
   grid-row: 20/21;
   align-items: center;
