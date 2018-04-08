@@ -1,6 +1,8 @@
-$bg-color-red: #FF5851
-$bg-color-tan: #FFF8E6
-$bg-color-gray: #333333
+//Variables, inheretence and mixins
+
+$color-red: #FF5851
+$color-tan: #FFF8E6
+$color-gray: #333333
 $color-orange: #FDA852
 
 %horizontal-position-right
@@ -12,78 +14,73 @@ $color-orange: #FDA852
     font-size: 15px
     color: $color-orange
 
+%five-thirty-grid
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: repeat(30, 1fr)
+
+@mixin web-animation( $time: 1s )
+  -webkit-animation: fadein $time /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein $time /* Firefox < 16 */
+        -ms-animation: fadein $time /* Internet Explorer */
+         -o-animation: fadein $time /* Opera < 12.1 */
+            animation: fadein $time
+
+
+//Styles
+
 .will-image
   width: 330px
   border-radius: 50%
   grid-column: 2/6
   grid-row: 2/5
-
-
   opacity: 1
-  -webkit-animation: fadein 1s /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1s /* Firefox < 16 */
-        -ms-animation: fadein 1s /* Internet Explorer */
-         -o-animation: fadein 1s /* Opera < 12.1 */
-            animation: fadein 1s
+  @include web-animation(1s)
 
 .background-wrapper
   display: grid
   grid-template-columns: repeat(2, 1fr)
 
-
 .bg1
-  background-color: $bg-color-red
-
+  background-color: $color-red
 
 .bg2
   grid-column: 2/3
-  background-color: $bg-color-tan
+  background-color: $color-tan
 
 
 .left-wrapper
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(30, 1fr)
+  @extend %five-thirty-grid
 
+.left-wrapper
+  h2
+   font-family: 'Montserrat', sans-serif
+   font-size: 30px
+   color: $color-red
 
-.left-wrapper > h2
-  font-family: 'Montserrat', sans-serif
-  font-size: 30px
-  color: $bg-color-red
+   display: flex
+   align-items: center
+   justify-content: center
 
-  display: flex
-  align-items: center
-  justify-content: center
-
-
-.left-wrapper > .p2
-  line-height: 50px
+  .p2
+    line-height: 50px
 
 
 .right-wrapper
-  display: grid
-  grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(30, 1fr)
+  @extend %five-thirty-grid
 
 
 .title-1
   @extend %horizontal-position-right
   grid-row: 2/3
   margin-left: 30px
-
   display: flex
   align-items: flex-end
-
-
   font-size: 50px
   font-family: 'Alfa Slab One', cursive
-
   opacity: 1
-  -webkit-animation: fadein 1s /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1s /* Firefox < 16 */
-        -ms-animation: fadein 1s /* Internet Explorer */
-         -o-animation: fadein 1s /* Opera < 12.1 */
-            animation: fadein 1s
+  @include web-animation(2.5s)
+
 
 
 @keyframes fadein
@@ -102,11 +99,7 @@ $color-orange: #FDA852
   color: #545454
   font-family: 'Montserrat', sans-serif
   opacity: 1
-  -webkit-animation: fadein 2.5s /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2.5s /* Firefox < 16 */
-        -ms-animation: fadein 2.5s /* Internet Explorer */
-         -o-animation: fadein 2.5s /* Opera < 12.1 */
-            animation: fadein 2.5s
+  @include web-animation(2.5s)
 
 
 .boi
@@ -193,7 +186,7 @@ $color-orange: #FDA852
 #html
   @extend %horizontal-position-right
   grid-row: 9/10
-  color: $bg-color-tan
+  color: $color-tan
 
 
 #htmlp
@@ -208,7 +201,7 @@ $color-orange: #FDA852
   @extend %horizontal-position-right
   grid-row: 10/11
   align-items: flex-end
-  color: $bg-color-tan
+  color: $color-tan
   padding-bottom: none
 
 
@@ -223,7 +216,7 @@ $color-orange: #FDA852
 #ruby
   @extend %horizontal-position-right
   grid-row: 13/14
-  color: $bg-color-tan
+  color: $color-tan
 
 
 #rubyp
@@ -237,7 +230,7 @@ $color-orange: #FDA852
 #svg
   @extend %horizontal-position-right
   grid-row: 12/13
-  color: $bg-color-tan
+  color: $color-tan
   align-items: flex-start
   justify-content: center
 
@@ -259,7 +252,7 @@ $color-orange: #FDA852
   @extend %horizontal-position-right
   grid-row: 14/15
   align-items: flex-end
-  color: $bg-color-tan
+  color: $color-tan
 
 
 #gitp
@@ -273,7 +266,7 @@ $color-orange: #FDA852
   @extend %horizontal-position-right
   grid-row: 16/17
   align-items: center
-  color: $bg-color-tan
+  color: $color-tan
 
 
 #illustratorp
@@ -286,7 +279,7 @@ $color-orange: #FDA852
   @extend %horizontal-position-right
   grid-row: 18/19
   align-items: flex-start
-  color: $bg-color-tan
+  color: $color-tan
 
 #audiop
   @extend %horizontal-position-right
@@ -327,13 +320,13 @@ $color-orange: #FDA852
 .bg3
   grid-column: 1/6
   grid-row: 7/31
-  background-color: $bg-color-gray
+  background-color: $color-gray
 
 
 .bg4
   grid-column: 1/6
   grid-row: 14/31
-  background-color: $bg-color-red
+  background-color: $color-red
 
 
 .audiotext
@@ -341,7 +334,7 @@ $color-orange: #FDA852
   grid-row: 15/17
   align-items: flex-start
   justify-content: center
-  color: $bg-color-tan
+  color: $color-tan
   font-size: 30px
   font-family: 'Montserrat', sans-serif
 
