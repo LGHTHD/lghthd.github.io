@@ -390,10 +390,11 @@ button {
 
 }
 
-.form-inline {
+.contact-collapse {
   grid-column: 3/4;
   grid-row: 20/21;
   align-items: center;
   height: 60px;
+  
 
 }

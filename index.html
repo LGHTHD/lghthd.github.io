@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One|Limelight|Montserrat|Nunito:200,300,400" rel="stylesheet">
-
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
 
@@ -295,13 +297,22 @@
 
       <div class="audiotext">10+ years of audio experience</div>
 
-      <form class="form-inline" action="https://formspree.io/williambjrk@gmail.com"
-      method="POST">
-        <input class="form-control" type="text" name="name" placeholder="Name">
-        <input class="form-control" type="email" name="_replyto" placeholder="name@example.com">
-        <textarea class="form-control" name="message" placeholder="Your message"></textarea>
-        <input class="btn btn-primary mb-2" type="submit" value="Send">
+  <div class="contact-collapse">
+
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Contact</button>
+
+      <div id="demo" class="collapse">
+
+        <form class="form-inline" action="https://formspree.io/williambjrk@gmail.com"
+        method="POST">
+          <input class="form-control" type="text" name="name" placeholder="Name">
+          <input class="form-control" type="email" name="_replyto" placeholder="name@example.com">
+          <textarea class="form-control" name="message" placeholder="Your message"></textarea>
+          <input class="btn btn-primary mb-2" type="submit" value="Send">
       </form>
+
+    </div>
+  </div>
 
     <!--  <button type="button" class="btn btn-secondary btn-lg">Contact me</button> -->
 
