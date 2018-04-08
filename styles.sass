@@ -1,3 +1,17 @@
+$bg-color-red: #FF5851
+$bg-color-tan: #FFF8E6
+$bg-color-gray: #333333
+$color-orange: #FDA852
+
+%horizontal-position-right
+  grid-column: 1/6
+  display: flex
+  justify-content: center
+
+%skills-paragraph-styles
+    font-size: 15px
+    color: $color-orange
+
 .will-image
   width: 330px
   border-radius: 50%
@@ -18,12 +32,12 @@
 
 
 .bg1
-  background-color: #FF5851
+  background-color: $bg-color-red
 
 
 .bg2
   grid-column: 2/3
-  background-color: #FFF8E6
+  background-color: $bg-color-tan
 
 
 .left-wrapper
@@ -35,7 +49,7 @@
 .left-wrapper > h2
   font-family: 'Montserrat', sans-serif
   font-size: 30px
-  color: #FF5851
+  color: $bg-color-red
 
   display: flex
   align-items: center
@@ -53,13 +67,12 @@
 
 
 .title-1
-  grid-column: 2/5
+  @extend %horizontal-position-right
   grid-row: 2/3
   margin-left: 30px
 
   display: flex
   align-items: flex-end
-
 
 
   font-size: 50px
@@ -85,7 +98,7 @@
   display: flex
   justify-content: flex-start
 
-  margin-left: 40px
+  margin-left: 70px
   color: #545454
   font-family: 'Montserrat', sans-serif
   opacity: 1
@@ -176,163 +189,136 @@
   opacity: 1
 
 
+
 #html
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 9/10
-  color: #FFF8E6
+  color: $bg-color-tan
 
 
 #htmlp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 10/11
-  font-size: 15px
-  display: flex
   align-items: baseline
-  justify-content: center
-  color: #FDA852
+
 
 
 #javascript
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 10/11
-  display: flex
   align-items: flex-end
-  justify-content: center
-  color: #FFF8E6
+  color: $bg-color-tan
   padding-bottom: none
 
 
 #javascriptp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 11/12
-  font-size: 15px
-  display: flex
   align-items: center
-  justify-content: center
-  color: #FDA852
+
 
 
 #ruby
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 13/14
-  color: #FFF8E6
+  color: $bg-color-tan
 
 
 #rubyp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 14/15
-  font-size: 15px
-  display: flex
   align-items: start
-  justify-content: center
-  color: #FDA852
+
 
 
 #svg
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 12/13
-  color: #FFF8E6
-  display: flex
+  color: $bg-color-tan
   align-items: flex-start
   justify-content: center
 
 
 #svgp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 12/13
-  font-size: 15px
-  display: flex
   align-items: flex-end
-  justify-content: center
-  color: #FDA852
 
 
 #sql
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 17/18
   text-decoration: underline
 
 
 #git
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 14/15
   align-items: flex-end
-  justify-content: center
-  color: #FFF8E6
+  color: $bg-color-tan
 
 
 #gitp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 15/16
   align-items: center
-  justify-content: center
-  color: #FDA852
-  font-size: 15px
 
 
 #illustrator
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 16/17
   align-items: center
-  justify-content: center
-  color: #FFF8E6
+  color: $bg-color-tan
 
 
 #illustratorp
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 17/18
   align-items: flex-start
-  justify-content: center
-  color: #FDA852
-  font-size: 15px
-
 
 #audio
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 18/19
   align-items: flex-start
-  justify-content: center
-  color: #FFF8E6
-
+  color: $bg-color-tan
 
 #audiop
-  grid-column: 1/6
+  @extend %horizontal-position-right
+  @extend  %skills-paragraph-styles
   grid-row: 19/20
   align-items: flex-start
-  justify-content: center
-  color: #FC8A2A
-  font-size: 15px
-
 
 .boujee
-  grid-column: 2/5
+  @extend %horizontal-position-right
   grid-row: 19/25
   z-index: 2
 
 
 .patient
-  grid-column: 2/5
+  @extend %horizontal-position-right
   grid-row: 22/25
   z-index: 2
 
-
 .odali
-  grid-column: 2/5
+  @extend %horizontal-position-right
   grid-row: 25/28
   z-index: 2
 
-
-
-
 .squiggle1
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 5/8
   align-items: center
   margin-top: 10px
 
 
 .squiggle-2
-  grid-column: 1/6
+  @extend %horizontal-position-right
   grid-row: 13/18
   margin-top: 80px
   z-index: 2
@@ -341,13 +327,13 @@
 .bg3
   grid-column: 1/6
   grid-row: 7/31
-  background-color: #333333
+  background-color: $bg-color-gray
 
 
 .bg4
   grid-column: 1/6
   grid-row: 14/31
-  background-color: #FF5851
+  background-color: $bg-color-red
 
 
 .audiotext
@@ -355,7 +341,7 @@
   grid-row: 15/17
   align-items: flex-start
   justify-content: center
-  color: #FFF8E6
+  color: $bg-color-tan
   font-size: 30px
   font-family: 'Montserrat', sans-serif
 
