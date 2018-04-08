@@ -390,7 +390,7 @@ button {
 
 }
 
-.mail {
+.form-inline {
   grid-column: 3/4;
   grid-row: 20/21;
   align-items: center;
