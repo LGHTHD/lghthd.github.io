@@ -355,7 +355,9 @@
 
 .squiggle-2 {
   grid-column: 1/6;
-  grid-row: 14/18;
+  grid-row: 13/18;
+  margin-top: 80px;
+  z-index: 2;
 }
 
 .bg3 {
