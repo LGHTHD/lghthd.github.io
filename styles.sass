@@ -1,0 +1,375 @@
+.will-image
+  width: 330px
+  border-radius: 50%
+  grid-column: 2/6
+  grid-row: 2/5
+
+
+  opacity: 1
+  -webkit-animation: fadein 1s /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s /* Firefox < 16 */
+        -ms-animation: fadein 1s /* Internet Explorer */
+         -o-animation: fadein 1s /* Opera < 12.1 */
+            animation: fadein 1s
+
+.background-wrapper
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+
+.bg1
+  background-color: #FF5851
+
+
+.bg2
+  grid-column: 2/3
+  background-color: #FFF8E6
+
+
+.left-wrapper
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: repeat(30, 1fr)
+
+
+.left-wrapper > h2
+  font-family: 'Montserrat', sans-serif
+  font-size: 30px
+  color: #FF5851
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.left-wrapper > .p2
+  line-height: 50px
+
+
+.right-wrapper
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: repeat(30, 1fr)
+
+
+.title-1
+  grid-column: 2/5
+  grid-row: 2/3
+  margin-left: 30px
+
+  display: flex
+  align-items: flex-end
+
+
+
+  font-size: 50px
+  font-family: 'Alfa Slab One', cursive
+
+  opacity: 1
+  -webkit-animation: fadein 1s /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s /* Firefox < 16 */
+        -ms-animation: fadein 1s /* Internet Explorer */
+         -o-animation: fadein 1s /* Opera < 12.1 */
+            animation: fadein 1s
+
+
+@keyframes fadein
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+
+.title-2
+  grid-column: 2/5
+  grid-row: 3/4
+
+  display: flex
+  justify-content: flex-start
+
+  margin-left: 40px
+  color: #545454
+  font-family: 'Montserrat', sans-serif
+  opacity: 1
+  -webkit-animation: fadein 2.5s /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2.5s /* Firefox < 16 */
+        -ms-animation: fadein 2.5s /* Internet Explorer */
+         -o-animation: fadein 2.5s /* Opera < 12.1 */
+            animation: fadein 2.5s
+
+
+.boi
+  grid-column: 2/5
+  grid-row: 5/10
+  opacity: 0
+  transition: all 2s ease-out
+  margin-top: 141px
+
+
+.boi.fade-in
+  opacity: 1
+
+
+.outline
+  grid-column: 2/5
+  grid-row: 5/10
+  justify-content: center
+  margin-top: 122px
+  margin-left: 21px
+  opacity: 0
+  transition: all 1s ease-out
+
+
+.outline.fade-in
+  opacity: 1
+
+
+.manman
+  grid-column: 2/5
+  grid-row: 10/14
+  justify-content: center
+  width: 330px
+  margin-top: 25px
+  margin-left: 17px
+  z-index: 3
+  opacity: 0
+  transition: all 1.4s ease-out
+
+
+.manman.fade-in
+  opacity: 1
+
+
+.intro
+  grid-column: 2/5
+  grid-row: 5/7
+
+
+.p2
+  grid-column: 1/6
+  grid-row: 7/9
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+
+  color: #FFF8E6
+  margin-top: 25px
+  margin-left: 15px
+
+  display: flex
+  justify-content: center
+
+  position: relative
+  z-index: 2
+
+  opacity: 0
+  transition: all 1s ease-out
+
+
+.p2.fade-in
+  opacity: 1
+
+
+.skills
+  opacity: 0
+  transition: all 2s ease-out
+
+
+.skills.fade-in
+  opacity: 1
+
+
+#html
+  grid-column: 1/6
+  grid-row: 9/10
+  color: #FFF8E6
+
+
+#htmlp
+  grid-column: 1/6
+  grid-row: 10/11
+  font-size: 15px
+  display: flex
+  align-items: baseline
+  justify-content: center
+  color: #FDA852
+
+
+#javascript
+  grid-column: 1/6
+  grid-row: 10/11
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  color: #FFF8E6
+  padding-bottom: none
+
+
+#javascriptp
+  grid-column: 1/6
+  grid-row: 11/12
+  font-size: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #FDA852
+
+
+#ruby
+  grid-column: 1/6
+  grid-row: 13/14
+  color: #FFF8E6
+
+
+#rubyp
+  grid-column: 1/6
+  grid-row: 14/15
+  font-size: 15px
+  display: flex
+  align-items: start
+  justify-content: center
+  color: #FDA852
+
+
+#svg
+  grid-column: 1/6
+  grid-row: 12/13
+  color: #FFF8E6
+  display: flex
+  align-items: flex-start
+  justify-content: center
+
+
+#svgp
+  grid-column: 1/6
+  grid-row: 12/13
+  font-size: 15px
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  color: #FDA852
+
+
+#sql
+  grid-column: 1/6
+  grid-row: 17/18
+  text-decoration: underline
+
+
+#git
+  grid-column: 1/6
+  grid-row: 14/15
+  align-items: flex-end
+  justify-content: center
+  color: #FFF8E6
+
+
+#gitp
+  grid-column: 1/6
+  grid-row: 15/16
+  align-items: center
+  justify-content: center
+  color: #FDA852
+  font-size: 15px
+
+
+#illustrator
+  grid-column: 1/6
+  grid-row: 16/17
+  align-items: center
+  justify-content: center
+  color: #FFF8E6
+
+
+#illustratorp
+  grid-column: 1/6
+  grid-row: 17/18
+  align-items: flex-start
+  justify-content: center
+  color: #FDA852
+  font-size: 15px
+
+
+#audio
+  grid-column: 1/6
+  grid-row: 18/19
+  align-items: flex-start
+  justify-content: center
+  color: #FFF8E6
+
+
+#audiop
+  grid-column: 1/6
+  grid-row: 19/20
+  align-items: flex-start
+  justify-content: center
+  color: #FC8A2A
+  font-size: 15px
+
+
+.boujee
+  grid-column: 2/5
+  grid-row: 19/25
+  z-index: 2
+
+
+.patient
+  grid-column: 2/5
+  grid-row: 22/25
+  z-index: 2
+
+
+.odali
+  grid-column: 2/5
+  grid-row: 25/28
+  z-index: 2
+
+
+
+
+.squiggle1
+  grid-column: 1/6
+  grid-row: 5/8
+  align-items: center
+  margin-top: 10px
+
+
+.squiggle-2
+  grid-column: 1/6
+  grid-row: 13/18
+  margin-top: 80px
+  z-index: 2
+
+
+.bg3
+  grid-column: 1/6
+  grid-row: 7/31
+  background-color: #333333
+
+
+.bg4
+  grid-column: 1/6
+  grid-row: 14/31
+  background-color: #FF5851
+
+
+.audiotext
+  grid-column: 2/5
+  grid-row: 15/17
+  align-items: flex-start
+  justify-content: center
+  color: #FFF8E6
+  font-size: 30px
+  font-family: 'Montserrat', sans-serif
+
+
+button
+  grid-column: 3/4
+  grid-row: 20/21
+  align-items: center
+  height: 60px
+
+
+
+.contact-collapse
+  grid-column: 3/4
+  grid-row: 20/21
+  align-items: center
+  height: 60px

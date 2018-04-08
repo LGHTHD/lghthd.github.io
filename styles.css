@@ -1,3 +1,6 @@
+
+/* Old CSS (not linked to index.html) */
+
 .will-image {
   width: 330px;
   border-radius: 50%;
@@ -395,6 +398,4 @@ button {
   grid-row: 20/21;
   align-items: center;
   height: 60px;
-  
-
 }
