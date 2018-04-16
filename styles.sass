@@ -18,7 +18,7 @@ $color-orange: #FDA852
 %five-thirty-grid
   display: grid
   grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(30, 1fr)
+  grid-template-rows: repeat(28, 1fr)
 
 @mixin web-animation( $time: 1s )
   -webkit-animation: fadein $time /* Safari, Chrome and Opera > 12.1 */
@@ -248,12 +248,14 @@ a:hover
 #gitp
   @extend  %skills-paragraph-styles
   grid-row: 15/16
-  align-items: center
+  align-items: flex-start
+  margin-top: 20px
 
 
 #illustrator
   grid-row: 16/17
-  align-items: center
+  align-items: flex-start
+
   color: $color-tan
 
 
@@ -261,6 +263,7 @@ a:hover
   @extend  %skills-paragraph-styles
   grid-row: 17/18
   align-items: flex-start
+
 
 #audio
   grid-row: 18/19
