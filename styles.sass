@@ -35,6 +35,17 @@ $color-orange: #FDA852
 
 
 //Styles
+a
+  color: $color-red
+  margin-top: 16.5px
+  margin-left: 6px
+
+
+a:hover
+  color: darken( $color-red, 5%)
+
+  a:visited
+    color: darken( $color-red, 70%)
 
 .will-image
   width: 330px
@@ -188,8 +199,8 @@ $color-orange: #FDA852
 #javascript
   grid-row: 10/11
   align-items: flex-end
-  color: $color-tan
   padding-bottom: none
+  color: $color-tan
 
 
 #javascriptp
@@ -213,8 +224,8 @@ $color-orange: #FDA852
 
 #svg
   grid-row: 12/13
-  color: $color-tan
   align-items: flex-start
+  color: $color-tan
 
 
 #svgp
@@ -267,12 +278,15 @@ $color-orange: #FDA852
   @extend %horizontal-position
 
 #boujee
+  grid-column: 2/5
   grid-row: 19/25
 
 #patient
+  grid-column: 2/5
   grid-row: 22/25
 
 #odali
+  grid-column: 2/5
   grid-row: 25/28
 
 //Animations
@@ -287,7 +301,7 @@ $color-orange: #FDA852
   @extend %horizontal-position
   grid-row: 13/18
   margin-top: 80px
-  z-index: 2
+
 
 
 .bg3
