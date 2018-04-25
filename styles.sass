@@ -10,7 +10,6 @@ $color-orange: #FDA852
   display: flex
   justify-content: center
 
-
 %skills-paragraph-styles
     font-size: 15px
     color: $color-orange
@@ -18,7 +17,7 @@ $color-orange: #FDA852
 %five-thirty-grid
   display: grid
   grid-template-columns: repeat(5, 1fr)
-  grid-template-rows: repeat(28, 1fr)
+
 
 @mixin web-animation( $time: 1s )
   -webkit-animation: fadein $time /* Safari, Chrome and Opera > 12.1 */
@@ -32,14 +31,11 @@ $color-orange: #FDA852
   opacity: 0
 
 
-
-
 //Styles
 a
   color: $color-red
   margin-top: 16.5px
   margin-left: 6px
-
 
 a:hover
   color: darken( $color-red, 5%)
@@ -66,9 +62,9 @@ a:hover
   grid-column: 2/3
   background-color: $color-tan
 
-
 .left-wrapper
   @extend %five-thirty-grid
+  grid-template-rows: repeat(28, 11rem)
 
 .left-wrapper
   h2
@@ -81,10 +77,9 @@ a:hover
   .p2
     line-height: 50px
 
-
 .right-wrapper
   @extend %five-thirty-grid
-
+  grid-template-rows: repeat(28, 11rem)
 
 .title-1
   grid-row: 2/3
@@ -100,7 +95,6 @@ a:hover
     from { opacity: 0; }
     to   { opacity: 1; }
 
-
 .title-2
   grid-column: 2/5
   grid-row: 3/4
@@ -111,51 +105,43 @@ a:hover
   @include web-animation(2.5s)
   @extend %horizontal-position
 
-
 .boi
   grid-column: 2/5
   grid-row: 5/10
-  margin-top: 141px
+  margin-top: 161px
   @include fadein(2s)
   @extend %horizontal-position
-
 
 .boi.fade-in
   opacity: 1
 
-
 .outline
   grid-column: 2/5
   grid-row: 5/10
-  margin-top: 122px
+  margin-top: 142px
   margin-left: 21px
   @include fadein(1s)
   @extend %horizontal-position
 
-
 .outline.fade-in
   opacity: 1
-
 
 .manman
   @extend %horizontal-position
   grid-column: 2/5
-  grid-row: 10/14
+  grid-row: 12/19
   width: 330px
   margin-top: 25px
   margin-left: 17px
   z-index: 3
   @include fadein(1.4s)
 
-
 .manman.fade-in
   opacity: 1
-
 
 .intro
   grid-column: 2/5
   grid-row: 5/7
-
 
 .p2
   grid-row: 7/9
@@ -169,20 +155,15 @@ a:hover
   @include fadein(1s)
   @extend %horizontal-position
 
-
 .p2.fade-in
   opacity: 1
-
 
 .skills
   @extend %horizontal-position
   @include fadein(2s)
 
-
 .skills.fade-in
   opacity: 1
-
-
 
 #html
   grid-row: 9/10
@@ -299,12 +280,10 @@ a:hover
   align-items: center
   margin-top: 10px
 
-
 .squiggle-2
   @extend %horizontal-position
-  grid-row: 13/18
-  margin-top: 80px
-
+  grid-row: 16/19
+  
 
 
 .bg3
@@ -312,12 +291,10 @@ a:hover
   grid-row: 7/31
   background-color: $color-gray
 
-
 .bg4
   grid-column: 1/6
-  grid-row: 14/31
+  grid-row: 17/31
   background-color: $color-red
-
 
 .audiotext
   grid-column: 2/5
@@ -328,14 +305,11 @@ a:hover
   font-size: 30px
   font-family: 'Montserrat', sans-serif
 
-
 button
   grid-column: 3/4
   grid-row: 20/21
   align-items: center
   height: 60px
-
-
 
 .contact-collapse
   grid-column: 3/4
