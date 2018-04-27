@@ -16,7 +16,7 @@ $(document).ready(function(){
   })
 
   .setClassToggle('.p2', 'fade-in') // add class to title-1
-  .addIndicators()
+
   .addTo(controller);
 
   // build a scene
@@ -28,7 +28,7 @@ var ourScene2 = new ScrollMagic.Scene({
 })
 
 .setClassToggle('.boi', 'fade-in') // add class to title-1
-.addIndicators()
+
 .addTo(controller);
 
 var ourScene3 = new ScrollMagic.Scene({
@@ -39,7 +39,7 @@ var ourScene3 = new ScrollMagic.Scene({
 })
 
 .setClassToggle('.outline', 'fade-in') // add class to title-1
-.addIndicators()
+
 .addTo(controller);
 
 // build a scene
@@ -51,7 +51,7 @@ triggerHook: 0.7
 })
 
 .setClassToggle('.manman', 'fade-in') // add class to title-1
-.addIndicators()
+
 .addTo(controller);
 
 // build a scene
@@ -63,6 +63,6 @@ triggerHook: 0.7
 })
 
 .setClassToggle('.skills-table', 'fade-in') // add class to title-1
-.addIndicators()
+
 .addTo(controller);
 });
