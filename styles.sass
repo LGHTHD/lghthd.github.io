@@ -13,6 +13,8 @@ $color-orange: #FDA852
 %skills-paragraph-styles
     font-size: 15px
     color: $color-orange
+    grid-column: 1/6
+    align-items: baseline
 
 %five-thirty-grid
   display: grid
@@ -34,7 +36,6 @@ $color-orange: #FDA852
 //Styles
 a
   color: $color-red
-  margin-left: 6px
 
 a:hover
   color: darken( $color-red, 5%)
@@ -71,7 +72,6 @@ a:hover
    font-family: 'Montserrat', sans-serif
    font-size: 30px
    align-items: center
-   color: $color-red
    @extend %horizontal-position
 
   .p2
@@ -132,7 +132,6 @@ a:hover
   grid-column: 2/5
   grid-row: 12/19
   width: 330px
-  margin-top: 25px
   margin-left: 17px
   z-index: 3
   @include fadein(1.4s)
@@ -159,92 +158,64 @@ a:hover
 .p2.fade-in
   opacity: 1
 
-.skills
+.skills-table
   @extend %horizontal-position
   @include fadein(2s)
+  grid-column: 2/5
+  grid-row: 9/17
+  display: grid
+  grid-template-rows: 15 1fr
 
-.skills.fade-in
+.skills-table.fade-in
   opacity: 1
 
 #html
-  grid-row: 9/10
+  grid-row: 1/2
   color: $color-tan
-
 
 #htmlp
   @extend  %skills-paragraph-styles
-  grid-row: 10/11
-  align-items: baseline
-
-
+  text-align: center
+  grid-row: 2/3
 
 #javascript
-  grid-row: 10/11
-  align-items: flex-end
-  padding-bottom: none
+  grid-row: 3/4
   color: $color-tan
-
 
 #javascriptp
   @extend  %skills-paragraph-styles
-  grid-row: 11/12
-  align-items: center
-
-
-
-#ruby
-  grid-row: 13/14
-  color: $color-tan
-
-
-#rubyp
-  @extend  %skills-paragraph-styles
-  grid-row: 14/15
-  align-items: start
-
+  text-align: center
+  grid-row: 4/5
 
 
 #svg
-  grid-row: 12/13
-  align-items: flex-start
+  grid-row: 5/6
   color: $color-tan
-
 
 #svgp
   @extend  %skills-paragraph-styles
-  grid-row: 12/13
-  align-items: flex-end
-
-
-#sql
-  grid-row: 17/18
-  text-decoration: underline
-
+  grid-row: 6/7
+  text-align: center
 
 #git
-  grid-row: 14/15
-  align-items: flex-end
+  grid-row: 7/8
   color: $color-tan
-
 
 #gitp
   @extend  %skills-paragraph-styles
-  grid-row: 15/16
-  align-items: flex-start
-  margin-top: 20px
+  grid-row: 8/9
+  text-align: center
 
 
 #illustrator
-  grid-row: 16/17
-  align-items: flex-start
-
+  grid-row: 10/11
   color: $color-tan
 
 
 #illustratorp
   @extend  %skills-paragraph-styles
-  grid-row: 17/18
-  align-items: flex-start
+  grid-row: 11/12
+  text-align: center
 
 
 #audio

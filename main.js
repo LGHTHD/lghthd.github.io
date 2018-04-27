@@ -33,7 +33,7 @@ var ourScene2 = new ScrollMagic.Scene({
 
 var ourScene3 = new ScrollMagic.Scene({
   triggerElement: '.outline',
-  triggerHook: 0.9
+  triggerHook: 0.7
 
 
 })
@@ -56,13 +56,13 @@ triggerHook: 0.7
 
 // build a scene
 var ourScene4 = new ScrollMagic.Scene({
-triggerElement: '.skills',
+triggerElement: '.skills-table',
 triggerHook: 0.7
 
 
 })
 
-.setClassToggle('.skills', 'fade-in') // add class to title-1
+.setClassToggle('.skills-table', 'fade-in') // add class to title-1
 .addIndicators()
 .addTo(controller);
 });
