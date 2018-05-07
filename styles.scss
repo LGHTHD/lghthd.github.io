@@ -20,6 +20,7 @@ $color-orange: #FDA852;
     color: $color-orange;
     grid-column: 1/6;
     align-items: baseline;
+    margin-bottom: 33px;
   }
 
 %five-thirty-grid {
@@ -39,12 +40,7 @@ $color-orange: #FDA852;
   transition: all $time ease-out;
   opacity: 0;
 }
-//Mobile styles
-@include media(≥phone) {
-  .bg1 {
-    background-color: black;
-  }
-}
+
 //Styles
 a {
   color: $color-red;
@@ -58,36 +54,52 @@ a:visited {
     color: darken( $color-red, 70%);
 }
 
-#will-image {
-  width: 330px;
-  border-radius: 50%;
+#will-image-mobile {
   grid-column: 2/5;
   grid-row: 2/5;
-  opacity: 1;
-  @include web-animation(1s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  border-radius: 50%;
+
+  @media only screen and (min-width: 680px) {
+    display: none;
+  }
+}
+
+
+
+#will-image {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  grid-column: 2/5;
+  grid-row: 2/5;
+  border-radius: 50%;
+  width: 330px;
+
+    @include web-animation(1s);
+
+  @media only screen and (max-width: 735px) {
+    margin-top: 70px;
+  }
 
   @media only screen and (max-width: 980px) {
     margin-top: 15px;
-  }
-
-  @media only screen and (max-width: 780px) {
-    margin-top: 50px;
   }
 }
 
 .background-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(30, 100px);
 }
 
-.bg1 {
-  background-color: $color-red;
-}
-
-.bg2 {
-  grid-column: 2/3;
-  background-color: $color-tan;
-
+@media only screen and (min-width: 693px) {
+  .background-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .left-wrapper {
@@ -105,6 +117,18 @@ a:visited {
   }
  }
 
+.bg1 {
+  background-color: $color-red;
+  grid-row: 1/8;
+}
+
+.bg2 {
+  grid-column: 2/3;
+  grid-row: 1/19;
+  background-color: $color-tan;
+}
+
+
 .p2 {
     line-height: 50px;
 }
@@ -115,30 +139,48 @@ a:visited {
 }
 
 .title-1 {
-  grid-row: 2/3;
-  margin-left: 30px;
-  align-items: flex-end;
-  font-size: 50px;
+  font-size: 24px;
+  grid-column: 1/6;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
   font-family: 'Alfa Slab One', cursive;
-  opacity: 1;
-  @include web-animation(2.5s);
-  @extend %horizontal-position;
-
-@keyframes fadein
-    from { opacity: 0; };
-    to   { opacity: 1; };
 }
+
+  @media only screen and (min-width: 693px) {
+    .title-1 {
+      grid-row: 2/4;
+      font-size: 50px;
+      opacity: 1;
+      @include web-animation(2.5s);
+      @keyframes fadein
+        from { opacity: 0; };
+        to   { opacity: 1; };
+      }
+    }
 
 .title-2 {
-  grid-column: 2/5;
-  grid-row: 3/4;
-  margin-left: 65px;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  grid-column: 1/6;
+  grid-row: 4/5;
+  margin-left: 70px;
   color: #545454;
   font-family: 'Montserrat', sans-serif;
-  opacity: 1;
-  @include web-animation(2.5s);
-  @extend %horizontal-position;
+
 }
+
+  @media only screen and (min-width: 693px) {
+    .title-2 {
+      grid-row: 3/4;
+      font-size: 30px;
+      margin-left: 30px;
+      margin-top: 29px;
+      opacity: 1;
+      @include web-animation(2.5s);
+    }
+  }
 
 .boi {
   grid-column: 2/5;
@@ -170,7 +212,6 @@ a:visited {
   grid-column: 2/5;
   grid-row: 12/19;
   width: 330px;
-  margin-left: 17px;
   z-index: 3;
   @include fadein(1.4s);
 }
@@ -217,6 +258,7 @@ a:visited {
 #html {
   grid-row: 1/2;
   color: $color-tan;
+
 }
 
 #htmlp {
@@ -256,29 +298,33 @@ a:visited {
   @extend  %skills-paragraph-styles;
   grid-row: 8/9;
   text-align: center;
+  display: flex;
+  justify-content: flex-start;
+
 }
 
 #illustrator {
-  grid-row: 10/11;
+  grid-row: 9/10;
   color: $color-tan;
 }
 
 #illustratorp {
   @extend  %skills-paragraph-styles;
-  grid-row: 11/12;
+  grid-row: 10/11;
   text-align: center;
 }
 
 #audio {
-  grid-row: 18/19;
-  align-items: flex-start;
+  grid-row: 11/12;
+  align-items: center;
   color: $color-tan;
+  margin-top: 15px;
 }
 
 #audiop {
   @extend  %skills-paragraph-styles;
-  grid-row: 19/20;
-  align-items: flex-start;
+  grid-row: 12/13;
+  text-align: center;
 }
 
 //Audio
@@ -294,12 +340,12 @@ a:visited {
 
 #patient {
   grid-column: 2/5;
-  grid-row: 22/25;
+  grid-row: 22/27;
 }
 
 #odali {
   grid-column: 2/5;
-  grid-row: 25/28;
+  grid-row: 22/28;
 }
 
 //Animations
@@ -339,26 +385,53 @@ a:visited {
   background-color: $color-red;
 }
 
-.audiotext {
+.audio-text {
   grid-column: 2/5;
-  grid-row: 15/17;
-  align-items: flex-start;
-  justify-content: center;
-  color: $color-tan;
-  font-size: 30px;
+  grid-row: 18/19;
+  text-align: center;
+  text-justify: center;
+  font-weight: bold;
+  color: #330000;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
+.light {
+  @extend %horizontal-position;
+  grid-column: 1/3;
+  grid-row: 25/27;
+  width: 330px;
+  margin-left: 17px;
+  z-index: 3;
+  margin-top: 54px;
+
+}
+
 button {
-  grid-column: 3/4;
-  grid-row: 20/21;
+  grid-column: 1/6;
+  grid-row: 27/28;
   align-items: center;
   height: 60px;
 }
 
 .contact-collapse {
   grid-column: 3/4;
-  grid-row: 20/21;
+  grid-row: 27/28;
+  display: flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
+}
+
+.copy {
+  color: $color-gray;
+  font-family: 'Montserrat', sans-serif;
+  grid-column: 4/6;
+  grid-row: 28/29;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+
 }
